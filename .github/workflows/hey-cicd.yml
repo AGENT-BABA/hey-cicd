@@ -18,6 +18,18 @@ jobs:
         run: uname -a
       - name: Show my name
         run: echo "My name is ${{ github.actor }}"
+  
+  build:
+    name: Build Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Build application
+        run: echo "Building application..."
+      - name: Build completed
+        run: echo "Build successful!"
+
   secrets-demo:
     runs-on: ubuntu-latest
     steps:
